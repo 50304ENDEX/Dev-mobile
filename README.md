@@ -1,0 +1,1 @@
+# Adicionando o gitignore na raiz do projeto para dar segmento no projeto em aulas futuras  
