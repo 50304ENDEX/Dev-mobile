@@ -3,7 +3,9 @@
 
 ### ReactNative ###
 # React Native Stack Base
-
+# node_modules is where React Native dependencies are installed
+node_modules/
+# Metro Bundler cache directory
 .expo
 __generated__
 
