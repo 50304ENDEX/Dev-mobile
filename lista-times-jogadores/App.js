@@ -80,6 +80,8 @@ export default function App() {
             imagem ={item.imagem}
             anoFundacao = {item.anoFundacao}
             mascote = {item.mascote}
+            jogadores = {item.jogadores}
+            keyExtractor={(item, index) => index.toString()}
           />
         )}
       

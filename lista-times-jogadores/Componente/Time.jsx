@@ -18,9 +18,20 @@ export default function Time(props) {
           style={styles.cardCover}
         />
 
-        <FlatList>
-            
-        </FlatList>
+      <Card.Actions>
+        <FlatList
+          horizontal
+          data={jogadores}
+          renderItem={({ item }) => (
+            <jogadores
+              nome={item.nome}
+              numero={item.numero}
+              imagem={item.imagem}
+            />
+          )}
+        />
+      </Card.Actions>
+      
 
       </Card>
     </View>
