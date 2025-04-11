@@ -1,17 +1,21 @@
-# Instalando o expo:
-"npm install -g expo-cli"
+Npm Install:
 
-# Criar um novo projeto:
-"npx create-expo-app@latest nome-projeto --template blank"
+npm install -g expo-cli
 
-# Instalando lib do componente paper:
-npm install react-native-vector-icons react-native-safe-area-context react-native-paper
+npx create-expo-app@latest nome --template blank
 
-# Instale a biblioteca do react-navigation:
+npm install react-native-paper
+
+npm install react-native-vector-icons react-native-safe-area-context
+
 npm install @react-navigation/native
 
-# Instale as dependencias necessárias:
 npx expo install react-native-screens react-native-safe-area-context
 
-# Instale o pacote de navegação por abas
 npm install @react-navigation/bottom-tabs
+
+Sites:
+
+https://reactnavigation.org/
+
+https://reactnativepaper.com/
