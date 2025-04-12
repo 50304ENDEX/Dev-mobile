@@ -23,7 +23,7 @@ export default function App() {
             options={{
               title: 'Inicio',
               tabBarIcon: ({ color, size }) => (
-                <Ionicons name='Home' color={color} size={size} />
+                <Ionicons name='attach-sharp' color={color} size={size} />
               )
             }}
           />
@@ -48,7 +48,7 @@ export default function App() {
                 <Ionicons name='settings' color={color} size={size} />
               )
             }}
-          
+
           />
 
         </Tab.Navigator>
