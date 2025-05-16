@@ -21,3 +21,7 @@ https://reactnavigation.org/
 https://reactnativepaper.com/
 
 https://oblador.github.io/react-native-vector-icons/
+
+
+para construir componente 
+rnfes

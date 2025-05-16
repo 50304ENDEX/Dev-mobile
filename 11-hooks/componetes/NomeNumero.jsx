@@ -1,6 +1,7 @@
 import { StyleSheet,  View } from 'react-native'
 import React, {useState} from 'react'
-import { Card, Text, Button } from 'react-native-paper'
+import { Button, Card, Text } from 'react-native-paper'
+
 
 export default function NomeNumero() {
     
@@ -17,8 +18,11 @@ export default function NomeNumero() {
         console.log(numero)
     }
 
-    function alertNome(){
-        alert(nome)
+    function alterarNome(){
+        setNome('Arthur')
+        setNumero('456')
+        console.log(numero)
+        console.log(nome)
     }
 
   return (
@@ -32,7 +36,7 @@ export default function NomeNumero() {
             </Card.Content>
             <Card.Actions>
                 <Button onPress={mostrarNomeNumero}>Mostrar</Button>   
-                <Button onPress={alertNome}>Alert</Button>
+                <Button onPress={alterarNome}>Alterar nome</Button>
             </Card.Actions>
       </Card>
     </View>

@@ -1,20 +1,22 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 
 import NomeNumero from './componetes/NomeNumero';
+import Controle from './componetes/Controle';
+import NumeroAleatorio from './componetes/NumeroAleatorio';
 
 export default function App() {
   return (
     <View style={styles.container}>
       
       <StatusBar style="auto" />
+      
+      <NumeroAleatorio/>
+      <NomeNumero/>
+      <Controle/>
 
-
-      <NomeNumero>
-
-      </NomeNumero>
     </View>
   );
 }
