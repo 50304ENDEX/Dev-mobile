@@ -1,11 +1,9 @@
-import { StyleSheet, View, FlatList } from 'react-native'
-import { Text } from 'react-native-paper'
-import React, { useEffect, useState } from 'react'
-import { Card, Avatar, IconButton} from 'react-native-paper'
-
 import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { StyleSheet, View, FlatList } from 'react-native'
+import { Card, Avatar, IconButton } from 'react-native-paper'
 
-export default function Homescreens(Naviagtion, route) {
+export default function Homescreens(navigation, route) {
 
 
     const [usuarios, SetUsuarios] = useState([])
@@ -13,37 +11,38 @@ export default function Homescreens(Naviagtion, route) {
     useEffect(() => {
 
         axios.get('https://dummyjson.com/users')
-        .then(
-            (response) => {
-                console.log(response.data.users)   
-                SetUsuarios(response.data.users)
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error)
-            }
-        )
+            .then(
+                (response) => {
+                    console.log(response.data.users)
+                    SetUsuarios(response.data.users)
+                }
+            )
+            .catch(
+                (error) => {
+                    console.log(error)
+                }
+            )
     }
     )
-
 
     return (
         <View style={styles.container}>
             <FlatList
-                data = {usuarios}
-                renderItem={({item}) => (
-                    <Card style={{ width:450, marginBottom:30, padding: 20}}
-                        onPress={() => alert('Clicou no Card')}
+                style={{ marginBottom: 45 }}
+                data={usuarios}
+                renderItem={({ item }) => (
+                    <Card
+                        style={{ width: 450, marginBottom: 30, padding: 20 }}
+                        onPress={() => Naviagtion.navigate('UsuarioScreen', item.id)}
                     >
-                        <Card.Title 
+                        <Card.Title
                             title={item.firstName + ' ' + item.lastName}
                             subtitle={item.email}
-                            left={(props) => <Avatar.Image {...props} source={{uri: item.image}} />}
-                            right={(props) => <IconButton icon="chevron-right" size={30}/> }
+                            left={(props) => <Avatar.Image {...props} source={{ uri: item.image }} />}
+                            right={() => <IconButton icon="chevron-right" size={30} />}
                         />
                     </Card>
-                )}          
+                )}
             />
         </View>
     )
