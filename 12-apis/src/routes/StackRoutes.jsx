@@ -7,7 +7,7 @@ import UsuarioScreen from '../screens/UsuarioScreen'
 
 const Stack = createStackNavigator()
 
-export default function StackRoutes() {
+export default function StackRoutes() { 
   return (
    <Stack.Navigator>
 

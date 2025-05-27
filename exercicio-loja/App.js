@@ -7,7 +7,7 @@ export default function App() {
     <PaperProvider>
       <NavigationContainer>
         <StackRoutes />
-      </NavigationContainer>
+      </NavigationContainer> 
     </PaperProvider>
   );
 }

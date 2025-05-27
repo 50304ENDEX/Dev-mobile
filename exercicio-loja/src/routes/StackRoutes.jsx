@@ -12,32 +12,11 @@ export default function StackRoutes() {
   return (
     <Stack.Navigator>
 
-      <Stack.Screen
-        name='HomeScreen'
-        component={HomeScreen}
-        options={{
-          title: "Home",
-          headerTitleAlign: 'center'
-        }}
-      />
+      <Stack.Screen name='HomeScreen' component={HomeScreen} />
 
-      <Stack.Screen
-        name='ListaScreen'
-        component={ListaProdutosScreen}
-        options={{
-          title: "Lista de Produtos",
-          headerTitleAlign: 'center'
-        }}
-      />
+      <Stack.Screen name='ListaScreen' component={ListaProdutosScreen} />
 
-      <Stack.Screen
-        name='ProdutoScreen'
-        component={ProdutoScreen}
-        options={{
-          title: "Produto",
-          headerTitleAlign: 'center'
-        }}
-      />
+      <Stack.Screen name='ProdutoScreen' component={ProdutoScreen} />
 
     </Stack.Navigator>
   )
