@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, FlatList } from 'react-native'
-import { Card, Avatar, IconButton } from 'react-native-paper'
+import { Avatar, Card, IconButton, Text, ActivityIndicator, MD2Colors } from 'react-native-paper'
 
-export default function Homescreens(navigation, route) {
+export default function Homescreens({navigation, route}) {
 
 
     const [usuarios, SetUsuarios] = useState([])
@@ -22,8 +22,7 @@ export default function Homescreens(navigation, route) {
                     console.log(error)
                 }
             )
-    }
-    )
+    }, [])
 
     return (
         <View style={styles.container}>
@@ -33,7 +32,7 @@ export default function Homescreens(navigation, route) {
                 renderItem={({ item }) => (
                     <Card
                         style={{ width: 450, marginBottom: 30, padding: 20 }}
-                        onPress={() => Naviagtion.navigate('UsuarioScreen', item.id)}
+                        onPress={() => navigation.navigate('UsuarioScreen', item.id)}
                     >
                         <Card.Title
                             title={item.firstName + ' ' + item.lastName}

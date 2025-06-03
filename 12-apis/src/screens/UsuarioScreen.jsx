@@ -12,13 +12,13 @@ export default function UsuarioScreen({ navigation, route }) {
 
 
   useEffect(() => {
-    axios.get("https://dummyjson.com/users/" + idUsuario)
+    axios.get("https://dummyjson.com/users/" + IdUsuario)
       .then(resposta => {
         setUsuario(resposta.data)
       })
       .catch(erro => alert('Erro ao buscar usuário!'))
 
-    axios.get("https://dummyjson.com/users/" + idUsuario + "/posts")
+    axios.get("https://dummyjson.com/users/" + IdUsuario  + "/posts")
       .then(resposta => {
         setPosts(resposta.data.posts)
       })
