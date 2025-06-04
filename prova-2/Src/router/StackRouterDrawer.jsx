@@ -4,7 +4,7 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 
 import HomeScreen from '../Screens/HomeScreen'
-import Form from '../Screens/Form'
+import Filmes from '../Screens/Filmes'
 
 const Drawer = createDrawerNavigator()
 
@@ -20,13 +20,16 @@ export default function StackRouterDrawer() {
                     ),
                 }}
             />
-            
+
             <Drawer.Screen
                 name='pessoal'
-                component={Form}
+                component={Filmes}
+                options={{
+                    drawerIcon: ({ color }) => (
+                        <Ionicons name="person" size={24} color={color} />
+                    ),
+                }}
             />
-
-
 
         </Drawer.Navigator>
     )
