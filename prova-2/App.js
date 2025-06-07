@@ -6,6 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import StackRouterDrawer from './Src/router/StackRouterDrawer';
 
+
 export default function App() {
   return (
     <PaperProvider>
